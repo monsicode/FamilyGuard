@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sea Gоddess</title>
+    <link rel="stylesheet" href="productPageSalt.css">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <nav>
+        <input type="checkbox" id="sidebar-active">
+
+        <label for="sidebar-active" class="open-sidebar-button">
+            <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
+                <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+            </svg>
+        </label>
+
+        <label id="overlay" for="sidebar-active"></label>
+
+        <div class="links-container">
+            <label for="sidebar-active" class="close-sidebar-button">
+                <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
+                    <path
+                        d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                </svg>
+            </label>
+
+            <div class="home-link" href="index.html">Family Guard</div>
+            <div id="img">
+                <img src="imgs/exportedLogo.png" alt="familyGuard" id="logo" class="transform">
+            </div>
+            <a href="products.html">Products</a>
+            <a href="about.html">About Us</a>
+            <a href="blog.html">Blog</a>
+
+        </div>
+    </nav>
+
+
+    <div class="link">
+        <a href="HomePage.html">Home</a>
+        <p>/ Spa Therapy</p>
+    </div>
+
+
+    <!-- Product part -->
+
+    <div class="wrapper">
+        <div class="product-box">
+            <div class="small-img">
+                <img src="imgs/withBack.jpg" onclick="clickimg(this)">
+                <!-- <img src="imgs/withBack.jpg" onclick="clickimg(this)"> -->
+                <img src="imgs/bath.png" onclick="clickimg(this)">
+                <img src="imgs/withBack.jpg" onclick="clickimg(this)">
+            </div>
+            <div class="main-img">
+                <img src="imgs/withBack.jpg" id="imgBox">
+            </div>
+        </div>
+
+        <div class="text">
+            <h1>Sea Goddess</h1>
+            <p>Bio-natural bath salts, for deep relaxation and skin nourishment.</p>
+            <hr>
+            <h2>250ml</h2>
+
+            <div class="description-box">
+                <div class="describe">
+                    <img src="imgs/nutrients.png" alt="">
+                    <p>Mineral-rich composition for hydrated and soft skin</p>
+                </div>
+                <div class="describe">
+                    <img src="imgs/no-chemical.png" alt="">
+                    <p>Free from harsh chemicals and artificial fragrances</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+        function clickimg(smallImg) {
+            var fullImg = document.getElementById("imgBox");
+            fullImg.src = smallImg.src;
+        }
+
+    </script>
+
+</body>
+
+</html>

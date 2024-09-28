@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Промяна на подредбата на продукти</title>
+    <style>
+        /* Стилове за бутоните */
+        .layout-controls {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .layout-controls button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            background-color: #004E99;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .layout-controls button:hover {
+            background-color: #009FE0;
+        }
+
+        /* Стил за мрежова подредба */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 20px;
+        }
+
+        /* .grid2{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        } */
+
+        /* Стил за списъчна подредба */
+        .list {
+            display: block;
+        }
+
+        .product {
+            padding: 20px;
+            border: 1px solid #ccc;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        /* Продуктите в списъчна подредба да са на цял ред */
+        .list .product {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Контролни бутони за смяна на подредбата -->
+    <div class="layout-controls">
+        <button id="grid-view">Мрежа</button>
+        <button id="list-view">Списък</button>
+    </div>
+
+    <!-- Контейнер с продукти -->
+    <div class="products grid" id="products-container">
+        <div class="product">Продукт 1</div>
+        <div class="product">Продукт 2</div>
+        <div class="product">Продукт 3</div>
+        <div class="product">Продукт 4</div>
+        <div class="product">Продукт 5</div>
+        <div class="product">Продукт 6</div>
+    </div>
+
+    <script>
+        const gridViewButton = document.getElementById('grid-view');
+        const listViewButton = document.getElementById('list-view');
+        const productsContainer = document.getElementById('products-container');
+
+        // Превключване към изглед на мрежа
+        gridViewButton.addEventListener('click', function() {
+            productsContainer.classList.remove('list');
+            productsContainer.classList.add('grid');
+        });
+
+        // Превключване към списъчен изглед
+        listViewButton.addEventListener('click', function() {
+            productsContainer.classList.remove('grid');
+            productsContainer.classList.add('list');
+        });
+    </script>
+
+</body>
+</html>

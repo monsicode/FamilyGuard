@@ -1,0 +1,281 @@
+body {
+    margin: 0%;
+    overflow: hidden;
+}
+
+#logo {
+    display: block;
+    margin: auto;
+    width: 80%;
+}
+
+.slidy-div {
+    transition: background-position 1s;
+    width: 100vw;
+    height: 100vh;
+}
+
+.slide-left {
+    background-size: 200% 100%;
+    background-image: linear-gradient(to left, white 50%, #004E99 50%);
+    background-position: -50% 0;
+}
+
+.slidy-div-selected {
+    background-position: 0 0;
+}
+
+
+/* div{
+        display: flex;
+        height: 80vh;
+    } */
+
+nav {
+    display: flex;
+    margin: auto;
+    justify-content: flex-end;
+  
+    padding-top: 1.5%;
+    padding-right: 5%;
+    /* padding-right: 300px; */
+    /* border: 2px solid black; */
+
+}
+
+nav a {
+    text-decoration: none;
+    position: relative;
+    color: white;
+    font-size: 22px;
+    /* text-transform: uppercase; */
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+
+    letter-spacing: 0.5px;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Playfair Display', serif;
+    cursor: pointer;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    background-color: #009FE0;
+    height: 3px;
+    width: 0%;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+/* nav a:hover {
+    color: rgb(160, 205, 250);
+} */
+
+.transform {
+    transition: all 0.8s ease;
+}
+
+.out {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.in {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slidy-button {
+    transition: all 1s ease;
+}
+
+/* #prod {
+        position: absolute;
+        left: 70%;
+        right: 0; 
+        transition: all 1s ease;
+    }
+    
+
+    .trans {
+        left: 50%;
+        right: auto; 
+        transform: translateX(-50%);
+    } */
+
+.trans {
+    transform: translate(-24vw);
+    transition: all 1s ease;
+    font-size: 55px;
+}
+
+
+.parentImg {
+    /* border: 3px solid red;
+        position: relative; 
+        width: 300px; 
+        height: 300px; 
+        margin: auto; 
+        top: 50%; 
+        transform: translateY(-50%); 
+        display: flex;
+        justify-content: center;
+        align-items: center; */
+
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* border: 2px solid black */
+
+}
+
+.text{
+    position: absolute;
+    /* transform: translateX(-300%); */
+    /* right: 60%;
+    bottom: 20%; */
+    width: 30%;
+    height: 70vh;
+    margin-left: 2.5%;
+    /* border: 2px solid red; */
+    /* overflow: hidden; */
+    bottom: 30%;
+   
+}
+.text h1{
+    /* font-size: 70px; */
+    font-size: 5em;
+    letter-spacing: 0.5px;
+   
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Playfair Display SC', serif;
+    font-weight: 60;
+
+}
+
+.text p{
+    font-size: 1.125em;
+    letter-spacing: 0.5px;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Playfair Display', serif;
+    font-weight: 100;
+    line-height: 2em;
+
+}
+
+
+.test:hover{
+    color: #892809;
+}
+
+button{
+    position: relative;
+    padding: 20px 60px;
+    border-radius: 20px;
+    background-color: #892809;
+    border: none; /* По-добре директно без border */
+    color: white;
+    font-size: 1.125em;
+    cursor: pointer; /* Добавя указание, че е интерактивен */
+    z-index: 20;
+    /* font-family: 'Playfair Display', serif; */
+    
+
+    border: 3px solid;
+    border-color: #671c04;
+
+     /* text-transform: uppercase; */
+    
+}
+
+button:hover{
+    background-color: #009FE0 !important;
+    border-color: #004E99 !important;   
+    border: 3px solid;
+}
+
+
+.parentImg>div {
+    position: absolute;
+}
+
+.productMenu {
+    transition: all 1s ease;
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    align-items: center;
+    visibility: hidden;
+
+    transform: translateX(150%);
+
+}
+
+
+.prodType1,
+.prodType2 {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* border: 2px solid black; */
+}
+
+
+.prodType1 h1,
+.prodType2 h1 {
+    color: aliceblue;
+    letter-spacing: 0.5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+}
+
+.imgProd{
+    cursor: pointer; /* Добавя указание, че е интерактивен */
+    /* z-index: 22; */
+}
+
+.imgProd:hover {
+    background-color: black;
+
+}
+
+/* .out2 {
+        opacity: 0;
+        transform: translateX(0);
+    }
+
+    
+    .in2 {
+        opacity: 1;
+        transform: translateX(150%);
+        visibility: visible;
+    } */
+
+.in2 {
+    opacity: 1;
+    transform: translateX(0);
+    visibility: visible;
+}
+
+.out2 {
+    opacity: 0;
+    transform: translateX(150%);
+    visibility: hidden;
+}
+
+
